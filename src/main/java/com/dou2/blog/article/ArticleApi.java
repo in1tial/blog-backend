@@ -1,4 +1,4 @@
-package com.blog.article;
+package com.dou2.blog.article;
 
 import java.util.List;
 

@@ -1,9 +1,10 @@
-package com.blog.article;
+package com.dou2.blog.article;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 /**
  * ArticleService
@@ -19,7 +20,7 @@ public class ArticleService {
     public List<Article> getDaoResult() {
         
         List<Article> rlt = artcileDao.getAllArticle();
-        
+        System.out.println(rlt);
         return rlt;
 
     }

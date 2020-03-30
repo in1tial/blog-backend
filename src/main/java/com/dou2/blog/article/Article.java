@@ -1,4 +1,5 @@
-package com.blog.article;
+package com.dou2.blog.article;
+
 
 public class Article {
     int articleId;
