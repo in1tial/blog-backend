@@ -1,8 +1,5 @@
-package commonBean;
+package com.blog.article;
 
-/**
- * Article
- */
 public class Article {
     int articleId;
     String articleTitle;
