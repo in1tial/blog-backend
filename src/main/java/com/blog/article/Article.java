@@ -1,4 +1,4 @@
-package com.dou2.blog.article;
+package com.blog.article;
 
 
 public class Article {

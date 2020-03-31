@@ -1,5 +1,4 @@
-
-package com.dou2;
+package com.blog;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -9,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * BlogApplication
  */
 
-@MapperScan("com.dou2.blog")
 @SpringBootApplication
+@MapperScan("com.blog")
 public class BlogApplication {
 
     public static void main(String[] args) {

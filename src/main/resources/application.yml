@@ -9,3 +9,8 @@ spring:
     username: root
     password: 123123123
 
+#mybatis
+# mybatis: 
+#   type-aliases-package: 
+
+
