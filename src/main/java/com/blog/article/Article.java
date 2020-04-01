@@ -5,7 +5,7 @@ public class Article {
     int articleId;
     String articleTitle;
     String articleContent;
-    int category;
+    int articleCategory;
     String createDate;
     String updateDate;
 
@@ -33,12 +33,12 @@ public class Article {
         this.articleContent = articleContent;
     }
 
-    public int getCategory() {
-        return category;
+    public int getArticleCategory() {
+        return articleCategory;
     }
 
-    public void setCategory(int category) {
-        this.category = category;
+    public void setArticleCategory(int articleCategory) {
+        this.articleCategory = articleCategory;
     }
 
     public String getCreateDate() {
@@ -56,5 +56,11 @@ public class Article {
     public void setUpdateDate(String updateDate) {
         this.updateDate = updateDate;
     }
+
+    @Override
+    public String toString() {
+        return ("id: "+ this.articleId + " title: " + this.articleTitle);
+    }
+    
     
 }

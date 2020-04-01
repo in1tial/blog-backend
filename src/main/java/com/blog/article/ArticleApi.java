@@ -21,9 +21,11 @@ public class ArticleApi {
 
         List<Article> list =  articleService.getDaoResult();
         
-        return list;
+        for(Article article: list){
+            System.out.println(article);
+        }
 
-        
+        return list;       
     }
      
 

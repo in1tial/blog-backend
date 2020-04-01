@@ -11,8 +11,12 @@ spring:
 
 #mybatis
 mybatis: 
-  # config-locations: classpath:mybatis/mybatis-config.xml
+  config-locations: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
+
+  configuration: 
+    # 配置数据库查询字段下划线转化为驼峰
+    mapUnderscoreToCamelCase: true
 
   # type-aliases-package: 
 

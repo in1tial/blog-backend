@@ -1,6 +1,8 @@
 
 package com.blog.user;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 // import org.springframework.web.bind.annotation.RequestParam;
@@ -18,8 +20,8 @@ public class UserController {
 
 
     @RequestMapping("/User")
-    public User searchUser(/*@RequestParam int id*/){
-        User u = iuser.getUserById();
+    public List<User> searchUser(/*@RequestParam int id*/){
+        List<User> u = iuser.getUserById();
         return u;
     }
     
