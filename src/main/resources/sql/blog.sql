@@ -1,0 +1,34 @@
+-- t_user
+CREATE TABLE blogdb.t_user (
+	USER_ID varchar(50) NOT NULL,
+	NICKNAME varchar(100) NULL,
+	SEX INT NULL
+	PHONE VARCHAR(20) NULL,
+	EMAIL varchar(100) NULL,
+	UUID CHAR(40) NULL,
+	ADDRESS varchar(100) NULL,
+	AVATAR_URL TEXT NULL,
+	AVATAR_BLOB BLOB NULL,
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;
+
+-- t_tag
+CREATE TABLE blogdb.t_tag (
+	TAG_ID INT NOT NULL,
+	TAG_NAME varchar(40) NOT NULL
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- t_category
+CREATE TABLE blogdb.t_category (
+	CATEGORY_ID INT NOT NULL,
+	CATEGORY_NAME varchar(40) NOT NULL
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;
