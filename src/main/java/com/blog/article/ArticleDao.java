@@ -8,6 +8,11 @@ import java.util.List;
  * ArticleDao
  */
 public interface ArticleDao {
-    public List<Article> getAllArticle();
+
+    public List<Article> findArticleList();
+
+    public Article findArticleById(int id);
+
+
     
 }

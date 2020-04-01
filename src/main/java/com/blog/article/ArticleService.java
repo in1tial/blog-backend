@@ -15,14 +15,19 @@ public class ArticleService {
 
     @Autowired
     ArticleDao artcileDao;
-
     
-    public List<Article> getDaoResult() {
+    // 处理文章列表
+    public List<Article> findArticleList() {
         
-        List<Article> rlt = artcileDao.getAllArticle();
-        System.out.println(rlt);
+        List<Article> rlt = artcileDao.findArticleList();
         return rlt;
 
+    }
+
+    // 处理单个文章
+    public Article findArticleById(int id){
+        Article article = artcileDao.findArticleById(id);
+        return article;
     }
 
     
