@@ -10,7 +10,10 @@ spring:
     password: 123123123
 
 #mybatis
-# mybatis: 
-#   type-aliases-package: 
+mybatis: 
+  # config-locations: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+  # type-aliases-package: 
 
 
