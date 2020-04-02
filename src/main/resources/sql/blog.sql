@@ -1,3 +1,15 @@
+-- blogdb.t_article definition
+
+CREATE TABLE `t_article` (
+  `ARTICLE_ID` int(11) NOT NULL,
+  `ARTICLE_TITLE` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `ARTICLE_CONTENT` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `ARTICLE_CATEGORY` int(11) DEFAULT NULL,
+  `ARTICLE_TAG` int(11) DEFAULT NULL,
+  `CREATE_DATE` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `UPDATE_DATE` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 -- t_user
 CREATE TABLE blogdb.t_user (
 	USER_ID varchar(50) NOT NULL,

@@ -16,10 +16,13 @@ public class ArticleService {
     @Autowired
     ArticleDao artcileDao;
     
+    
+
     // 处理文章列表
     public List<Article> findArticleList() {
-        
         List<Article> rlt = artcileDao.findArticleList();
+
+
         return rlt;
 
     }
