@@ -2,6 +2,8 @@ package com.blog.article;
 
 import java.util.List;
 
+import com.blog.commonBean.RestResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,9 +23,9 @@ public class ArticleApi {
     ArticleService articleService;
 
     @GetMapping("/List")
-    public List<Article> getArticleList(){
+    public RestResponse getArticleList(){
         
-        List<Article> list =  articleService.findArticleList();
+        RestResponse list =  articleService.findArticleList();
         
         /* for(Article article: list){
             System.out.println(article);
@@ -32,9 +34,9 @@ public class ArticleApi {
     }
 
     @GetMapping("/{id}")
-    public Article getArticleById(@PathVariable int id){
+    public RestResponse getArticleById(@PathVariable int id){
         
-        Article article =  articleService.findArticleById(id);
+        RestResponse article =  articleService.findArticleById(id);
         return article;       
     }
 
