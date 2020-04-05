@@ -1,4 +1,4 @@
-package com.blog.article;
+package com.blog.pojo;
 
 import java.sql.Timestamp;
 

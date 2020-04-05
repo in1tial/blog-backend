@@ -1,6 +1,8 @@
-package com.blog.article;
+package com.blog.dao;
 
 import java.util.List;
+
+import com.blog.pojo.Article;
 
 
 

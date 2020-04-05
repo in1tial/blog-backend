@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.blog.article.ArticleDao">
-    <resultMap id="articleMap" type="com.blog.article.Article">
+<mapper namespace="com.blog.dao.ArticleDao">
+    <resultMap id="articleMap" type="com.blog.pojo.Article">
         <result property="articleId" column="article_id"/>
         <result property="articleTitle" column="article_title"/>
         <result property="articleSubject" column="article_subject"/>
         <result property="articleContent" column="article_content"/>
-        <association property="meta" javaType="com.blog.article.Meta">
+        <association property="meta" javaType="com.blog.pojo.Meta">
             <result property="articleCategory" column="article_category"/>
             <result property="articleTag" column="article_tag"/>
             <result property="createDate" column="create_date"/>

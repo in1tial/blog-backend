@@ -1,12 +1,11 @@
-package com.blog.article;
+package com.blog.service;
 
-// import java.util.ArrayList;
-// import java.util.HashMap;
-// import java.util.Iterator;
 import java.util.List;
 // import java.util.Map;
 
 import com.blog.commonBean.RestResponse;
+import com.blog.dao.ArticleDao;
+import com.blog.pojo.Article;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,8 +21,6 @@ public class ArticleService {
     @Autowired
     ArticleDao artcileDao;
     
-    
-
     // 处理文章列表
     public RestResponse findArticleList() {
         

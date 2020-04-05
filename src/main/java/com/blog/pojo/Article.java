@@ -1,4 +1,4 @@
-package com.blog.article;
+package com.blog.pojo;
 
 public class Article {
     private int articleId;
