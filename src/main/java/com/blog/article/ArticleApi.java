@@ -1,7 +1,5 @@
 package com.blog.article;
 
-import java.util.List;
-
 import com.blog.commonBean.RestResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;

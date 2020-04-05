@@ -1,10 +1,10 @@
 package com.blog.article;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
+// import java.util.ArrayList;
+// import java.util.HashMap;
+// import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
+// import java.util.Map;
 
 import com.blog.commonBean.RestResponse;
 
@@ -28,30 +28,30 @@ public class ArticleService {
     public RestResponse findArticleList() {
         
         List<Article> artList = artcileDao.findArticleList();
-        
-        Iterator<Article> itor = artList.iterator();
+        return new RestResponse(artList);
+        // Iterator<Article> itor = artList.iterator();
 
-        List<Object> articleListFormated = new ArrayList<>();
+        // List<Object> articleListFormated = new ArrayList<>();
 
-        while (itor.hasNext()) {
-            Article article = itor.next();
+        // while (itor.hasNext()) {
+        //     Article article = itor.next();
         
-            Map<String,Object> metas = new HashMap<>();
+        //     Map<String,Object> metas = new HashMap<>();
             
-            metas.put("articleCategory", article.getArticleCategory());
-            metas.put("articleTag", article.getArticleTag());
-            metas.put("createDate", article.getCreateDate());
-            metas.put("updateDate", article.getCreateDate());
+        //     metas.put("articleCategory", article.getArticleCategory());
+        //     metas.put("articleTag", article.getArticleTag());
+        //     metas.put("createDate", article.getCreateDate());
+        //     metas.put("updateDate", article.getCreateDate());
             
-            Map<String,Object> post = new HashMap<>();
-            post.put("articleTitle", article.getArticleTitle());
-            post.put("articleContent", article.getArticleContent());
-            post.put("metas", metas);
+        //     Map<String,Object> post = new HashMap<>();
+        //     post.put("articleTitle", article.getArticleTitle());
+        //     post.put("articleContent", article.getArticleContent());
+        //     post.put("metas", metas);
 
-            articleListFormated.add(post);
-        }
+        //     articleListFormated.add(post);
+        // }
         
-        return new RestResponse("hello");
+        // return new RestResponse("hello");
     }
 
     // 处理单个文章

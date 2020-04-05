@@ -1,15 +1,21 @@
 package com.blog.article;
 
-import java.sql.Timestamp;
-
 public class Article {
     private int articleId;
     private String articleTitle;
     private String articleContent;
-    private int articleCategory;
-    private int articleTag;
-    private Timestamp createDate;
-    private Timestamp updateDate;
+    private String articleSubject;
+    private Meta meta;
+
+    public Article(){}
+
+    public Article(int articleId, String articleTitle, String articleContent, String articleSubject , Meta meta) {
+        this.articleId = articleId;
+        this.articleTitle = articleTitle;
+        this.articleContent = articleContent;
+        this.articleSubject = articleSubject;
+        this.meta = meta;
+    }
 
     public int getArticleId() {
         return articleId;
@@ -35,43 +41,26 @@ public class Article {
         this.articleContent = articleContent;
     }
 
-    public int getArticleCategory() {
-        return articleCategory;
+    public String getArticleSubject() {
+        return articleSubject;
     }
 
-    public void setArticleCategory(int articleCategory) {
-        this.articleCategory = articleCategory;
+    public void setArticleSubject(String articleSubject) {
+        this.articleSubject = articleSubject;
     }
 
-    public int getArticleTag() {
-        return articleTag;
+    public Meta getMeta() {
+        return meta;
     }
 
-    public void setArticleTag(int articleTag) {
-        this.articleTag = articleTag;
+    public void setMeta(Meta meta) {
+        this.meta = meta;
     }
 
-    public Timestamp getCreateDate() {
-        return createDate;
-    }
+    
 
-    public void setCreateDate(Timestamp createDate) {
-        this.createDate = createDate;
-    }
 
-    public Timestamp getUpdateDate() {
-        return updateDate;
-    }
-
-    public void setUpdateDate(Timestamp updateDate) {
-        this.updateDate = updateDate;
-    }
-
-    @Override
-    public String toString() {
-        return "Article [articleCategory=" + articleCategory + ", articleContent=" + articleContent + ", articleId="
-                + articleId + ", articleTag=" + articleTag + ", articleTitle=" + articleTitle + ", createDate="
-                + createDate + ", updateDate=" + updateDate + "]";
-    }
+    
+    
      
 }

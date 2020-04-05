@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.blog.article.ArticleDao">
-    <select id="findArticleList" resultType="com.blog.article.Article">
-        select * from t_article
+    <resultMap id="articleMap" type="com.blog.article.Article">
+        <result property="articleId" column="article_id"/>
+        <result property="articleTitle" column="article_title"/>
+        <result property="articleSubject" column="article_subject"/>
+        <result property="articleContent" column="article_content"/>
+        <association property="meta" javaType="com.blog.article.Meta">
+            <result property="articleCategory" column="article_category"/>
+            <result property="articleTag" column="article_tag"/>
+            <result property="createDate" column="create_date"/>
+            <result property="updateDate" column="update_date"/>
+        </association>
+    </resultMap>
+
+    <select id="findArticleList" resultMap="articleMap">
+        SELECT 
+            article_id, article_title, article_content, article_category, article_tag, create_date , update_date
+        FROM 
+            t_article
     </select>
 
-    <select id="findArticleById" resultType="com.blog.article.Article">
-        select * from t_article where ARTICLE_ID=#{id}
+    <select id="findArticleById" resultMap="articleMap">
+        SELECT
+            article_id, article_title, article_content, article_subject, article_category, article_tag, create_date , update_date
+        FROM
+            t_article
+        WHERE 
+            ARTICLE_ID=#{id}
     </select>
+
 </mapper>
