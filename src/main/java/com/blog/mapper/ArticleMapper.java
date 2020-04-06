@@ -1,4 +1,4 @@
-package com.blog.dao;
+package com.blog.mapper;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import com.blog.pojo.Article;
 
 
 /**
- * ArticleDao
+ * ArticleMapper
  */
-public interface ArticleDao {
+public interface ArticleMapper {
 
     public List<Article> findArticleList();
 

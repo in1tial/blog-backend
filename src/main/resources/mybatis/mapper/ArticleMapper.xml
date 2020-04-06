@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.blog.dao.ArticleDao">
+<mapper namespace="com.blog.mapper.ArticleMapper">
+    <sql id="articleColumn">
+        article_id, article_title, article_content, article_subject, article_category, article_tags, create_date , update_date
+    </sql>
     <resultMap id="articleMap" type="com.blog.pojo.Article">
         <result property="articleId" column="article_id"/>
         <result property="articleTitle" column="article_title"/>
@@ -8,7 +11,7 @@
         <result property="articleContent" column="article_content"/>
         <association property="meta" javaType="com.blog.pojo.Meta">
             <result property="articleCategory" column="article_category"/>
-            <result property="articleTag" column="article_tag"/>
+            <result property="articleTags" column="article_tags"/>
             <result property="createDate" column="create_date"/>
             <result property="updateDate" column="update_date"/>
         </association>
@@ -16,14 +19,14 @@
 
     <select id="findArticleList" resultMap="articleMap">
         SELECT 
-            article_id, article_title, article_content, article_category, article_tag, create_date , update_date
+            <include refid="articleColumn" />
         FROM 
             t_article
     </select>
 
     <select id="findArticleById" resultMap="articleMap">
         SELECT
-            article_id, article_title, article_content, article_subject, article_category, article_tag, create_date , update_date
+            <include refid="articleColumn" />
         FROM
             t_article
         WHERE 
